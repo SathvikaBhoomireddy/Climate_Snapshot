@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Climate Snapshot</title>
+    <
+    <style>
+        body
+        {
+            background-color: skyblue;
+        }
+        /* Reset margins and paddings */
+        * {
+            margin: 0pc;
+            padding: 0pc;
+            box-sizing: border-box;
+        }
+        body {
+    background-image: url('background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .navbar h1 {
+            color: skyblue;
+            font-size: 2.5em;
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            padding: 8px 12px;
+        }
+
+        .navbar a:hover {
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        /* Weather sections */
+        .weather-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .weather-section {
+            margin: 15px;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .weather-section:hover {
+            transform: translateY(-10px);
+            border-color: #4CAF50;
+        }
+
+        .weather-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .weather-section h2 {
+            margin: 10px 0;
+            font-size: 1.8em;
+        }
+
+        .weather-section p {
+            font-size: 1em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>Climate Snapshot</h1>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="weather.html">Weather Forecast</a>
+            <a href="5-days-weather-forecast.html">5 Days Weather Forecast</a>
+            <a href="air-quality.html">Air Quality Checker</a>
+            <a href="climate-tips.html">Climate Tips</a>
+            <a href="logout.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to Climate Snapshot</h1>
+        <p>Your ultimate guide to weather forecasting, air quality monitoring, and climate tips for a sustainable future.</p>
+
+        <div class="weather-info">
+            <div class="weather-section">
+                <img src="weatherforecast.png" alt="Weather Forecast"> <!-- Replace with your image -->
+                <h2>Weather Forecast</h2>
+                <p>Stay informed about the latest weather predictions for your location.</p>
+                <a href="weather.html">Learn More</a>
+            </div>
+
+            <div class="weather-section">
+                <img src="5daysweather.jpeg" alt="5 Days Forecast"> <!-- Replace with your image -->
+                <h2>5 Days Forecast</h2>
+                <p>Plan ahead with detailed 5-day weather forecasts.</p>
+                <a href="5-days-weather-forecast.html">Learn More</a>
+            </div>
+
+            <div class="weather-section">
+                <img src="airquality.jpg" alt="Air Quality Checker"> <!-- Replace with your image -->
+                <h2>Air Quality Checker</h2>
+                <p>Monitor the air quality in your area and stay safe from pollutants.</p>
+                <a href="air-quality.html">Learn More</a>
+            </div>
+
+            <div class="weather-section">
+                <img src="climatetips.png" alt="Climate Tips"> <!-- Replace with your image -->
+                <h2>Climate Tips</h2>
+                <p>Discover helpful tips to reduce your carbon footprint and live sustainably.</p>
+                <a href="climate-tips.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Climate Snapshot | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

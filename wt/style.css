@@ -1,0 +1,134 @@
+* {
+    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ADD8E6;
+    color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #000; 
+}
+
+.container {
+    background-color: #87CEEB; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input {
+    width: 200px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+body {
+    background-image: url('background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a semi-transparent background to the container */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 100px auto; /* Centers the container */
+}
+
+
+body {
+    padding-top: 50px; /* Ensure the body content is below the navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Common style for all pages */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 100px auto; /* Centers the container */
+}
+/* navbar.css */
+
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.navbar h1 {
+    color: skyblue;
+    font-size: 2.5em;
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding: 8px 12px;
+}
+
+.navbar a:hover {
+    background-color: black;
+    border-radius: 5px;
+}
+/* Ensure the navbar stays at the top of the page */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures it's on top of other elements */
+}
+
+
+body {
+    padding-top: 60px; /* Adjust this value based on the navbar's height */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Day Weather Forecast</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Climate Snapshot</h1>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="weather.html">Weather Forecast</a>
+        <a href="5-days-weather-forecast.html">5 Days Weather Forecast</a>
+        <a href="air-quality.html">Air Quality Checker</a>
+        <a href="climate-tips.html">Climate Tips</a>
+        <a href="logout.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>5-Day Weather Forecast</h1>
+    <div class="input-group">
+      <input type="text" id="city" placeholder="Enter City Name">
+      <button onclick="getWeatherForecast()">Get Forecast</button>
+    </div>
+    <div class="forecast" id="forecast"></div>
+  </div>
+
+  <script>
+    const apiKey = "fcc8de7015bbb202209bbf0261babf4c";
+    const forecastContainer = document.getElementById('forecast');
+
+    function getWeatherForecast() {
+      const city = document.getElementById('city').value;
+      if (!city) {
+        alert("Please enter a city name");
+        return;
+      }
+
+      const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          displayForecast(data);
+        })
+        .catch(error => {
+          alert("City not found or error fetching data");
+          console.error(error);
+        });
+    }
+
+    function displayForecast(data) {
+      forecastContainer.innerHTML = ''; // Clear existing forecast
+      const forecastList = data.list;
+
+      // Filter to get weather data for 12:00 PM each day
+      const dailyData = forecastList.filter(reading => reading.dt_txt.includes("12:00:00"));
+
+      dailyData.forEach(day => {
+        const date = new Date(day.dt * 1000).toLocaleDateString("en-US", { weekday: 'long', month: 'long', day: 'numeric' });
+        const temp = Math.round(day.main.temp);
+        const weatherDescription = day.weather[0].description;
+        const weatherIcon = `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+
+        const forecastDay = `
+          <div class="day">
+            <h3>${date}</h3>
+            <img src="${weatherIcon}" alt="Weather Icon">
+            <div class="temp">${temp}°C</div>
+            <div class="description">${weatherDescription}</div>
+          </div>
+        `;
+
+        forecastContainer.innerHTML += forecastDay;
+      });
+    }
+  </script>
+
+</body>
+</html>
